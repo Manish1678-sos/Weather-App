@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-image: url("Image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+.form
+{
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border-radius:10px;
+    border:0.1px solid black;
+    height:350px;
+    width:300px;
+    justify-content: center;
+    align-items:center;
+    
+}
+h1
+{
+text-align:center;
+}
+.search
+{
+    display: flex;
+    flex-direction: column;
+    padding:50px;
+}
+input{
+    border-radius:5px;
+margin-top:50px;
+}
+input:focus{
+    outline:none;
+}
+input:hover{
+    border-color:aqua;
+    transition: 0.6s;
+    box-shadow:0px 0px 4px 4px aqua;
+}
+button{
+    margin-top:30px;
+    height:50px;
+    width:100px;
+    margin-left:50px;
+    border-radius:30px;
+   background:linear-gradient(to right,darkblue,blue);
+   color:white;
+   border:none;
+   
+}
+button:hover{
+    background:linear-gradient(to right,blue,skyblue);
+    transition:1.3rem;
+    box-shadow: 0px 0px 3px 3px black ;
+}
+p
+{
+    text-align:center;
+}
