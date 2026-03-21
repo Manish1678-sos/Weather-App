@@ -23,7 +23,7 @@ body {
     backdrop-filter: blur(5px);
     border-radius:10px;
     border:0.1px solid black;
-    height:350px;
+    height:460px;
     width:300px;
     justify-content: center;
     align-items:center;
@@ -41,7 +41,7 @@ text-align:center;
 }
 input{
     border-radius:5px;
-margin-top:50px;
+
 }
 input:focus{
     outline:none;
@@ -67,7 +67,16 @@ button:hover{
     transition:1.3rem;
     box-shadow: 0px 0px 3px 3px black ;
 }
+
 p
 {
     text-align:center;
+}
+span{
+    text-align:center;
+}
+.temperature
+{
+    font-size:30px;
+    text-align:left;
 }
