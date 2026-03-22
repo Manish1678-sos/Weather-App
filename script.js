@@ -6,42 +6,47 @@ const conditionField = document.querySelector(".condition p");
 const form = document.querySelector("#Weather-form");
 const searchField = document.querySelector("#city");
 
+// 1. FIXED: Define a default starting location so the script doesn't break
+let targetLocation = "Kolkata"; 
 
-// form submit
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   targetLocation = searchField.value;
   fetchWeather(targetLocation);
 });
 
-// fetch weather
+
 async function fetchWeather(city) {
   try {
-  let url = `http://api.weatherapi.com/v1/current.json?key=c5478d57f8a84bdd99d173824262103&q=${targetLocation}&aqi=no`
+   
+    let url = `https://api.weatherapi.com/v1/current.json?key=c5478d57f8a84bdd99d173824262103&q=${city}&aqi=no`;
 
     const res = await fetch(url);
     const data = await res.json();
-
-    console.log(data);
 
     if (data.error) {
       alert("City not found!");
       return;
     }
 
+
     updateUI(data);
 
   } catch (error) {
-    console.log(error);
+    console.error("Error fetching weather:", error);
   }
 }
 
-// update UI
+
 function updateUI(data) {
+
   tempField.innerText = data.current.temp_c + "°C";
   locationField.innerText = data.location.name;
-  timeField.innerText = data.location.localtime;
-  conditionField.innerText = data.current.condition.text;
+  
+  
+  timeField.innerText = data.location.localtime; 
+  conditionField.innerText = data.current.condition.text; 
 }
 
 // default load

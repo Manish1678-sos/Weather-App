@@ -1,9 +1,12 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Adding a cleaner font */
 }
 
 .container {
+       background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
   background-image: url("Image.jpg");
   background-size: cover;
   background-position: center;
@@ -11,88 +14,83 @@ body {
   
 
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-
   color: white;
+     background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
 }
-.form
-{
-    background-color: transparent;
-    backdrop-filter: blur(5px);
-    border-radius:10px;
-    border:0.1px solid black;
-    height:460px;
-    width:300px;
-    justify-content: center;
-    align-items:center;
+
+#Weather-form {
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     
-}
-h1
-{
-text-align:center;
-}
-.search
-{
+ 
+    width: 350px;
+    height: auto;          
+    padding: 30px;         
     display: flex;
     flex-direction: column;
-    padding:50px;
-}
-input{
-    border-radius:5px;
-
-}
-input:focus{
-    outline:none;
-}
-input:hover{
-    border-color:aqua;
-    transition: 0.6s;
-    box-shadow:0px 0px 4px 4px aqua;
-}
-button{
-    margin-top:30px;
-    height:50px;
-    width:100px;
-    margin-left:50px;
-    border-radius:30px;
-   background:linear-gradient(to right,darkblue,blue);
-   color:white;
-   border:none;
-   
-}
-button:hover{
-    background:linear-gradient(to right,blue,skyblue);
-    transition:1.3rem;
-    box-shadow: 0px 0px 3px 3px black ;
+    align-items: center;   
+    gap: 15px;            
 }
 
-p
-{
-    text-align:center;
-}
-span{
-    text-align:center;
-}
-.temperature
-{
-    font-size:30px;
-    text-align:left;
-}
-@media (min-width: 768px) {
-  body {
-    background-color: lightgrey;
-  }
-  .container {
-    display: flex; /* Side-by-side layout starts here */
-  }
+h1 {
+  text-align: center;
+  color: white; 
+  margin-top: 0;
 }
 
-/* 3. Desktop Styles (Screens wider than 1024px) */
-@media (min-width: 1024px) {
-  body {
-    max-width: 1200px;
-    margin: 0 auto; /* Centers the project on big screens */
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;      
+    margin-bottom: 0;      
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 10px;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+button {
+    margin-top: 15px;    
+    margin-left: 0;      
+        height: 45px;
+    width: 130px;
+    border-radius: 25px;
+    background: linear-gradient(to right, darkblue, blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(to right, #0000ff, #87ceeb);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.temperature {
+  font-size: 48px; 
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+
+@media (max-width: 768px) {
+  .form {
+    width: 90%;
   }
 }
