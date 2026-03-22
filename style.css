@@ -80,3 +80,19 @@ span{
     font-size:30px;
     text-align:left;
 }
+@media (min-width: 768px) {
+  body {
+    background-color: lightgrey;
+  }
+  .container {
+    display: flex; /* Side-by-side layout starts here */
+  }
+}
+
+/* 3. Desktop Styles (Screens wider than 1024px) */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the project on big screens */
+  }
+}

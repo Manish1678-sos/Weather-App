@@ -6,7 +6,6 @@ const conditionField = document.querySelector(".condition p");
 const form = document.querySelector("#Weather-form");
 const searchField = document.querySelector("#city");
 
-let targetLocation = "Kolkata";
 
 // form submit
 form.addEventListener("submit", function (e) {
@@ -18,7 +17,7 @@ form.addEventListener("submit", function (e) {
 // fetch weather
 async function fetchWeather(city) {
   try {
-  let url = `https://api.weatherapi.com/v1/current.json?key=YOUR_KEY&q=Kolkata&aqi=no`;
+  let url = `http://api.weatherapi.com/v1/current.json?key=c5478d57f8a84bdd99d173824262103&q=${targetLocation}&aqi=no`
 
     const res = await fetch(url);
     const data = await res.json();
